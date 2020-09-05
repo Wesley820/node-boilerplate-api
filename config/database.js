@@ -10,7 +10,7 @@ module.exports = {
   | default is postgres.
   |
   */
-  dialect: process.env.DB_CONNECTION || 'postgres',
+  dialect: process.env.DB_DIALECT || 'postgres',
 
   /*
   |--------------------------------------------------------------------------
@@ -22,6 +22,16 @@ module.exports = {
   |
   */
   host: process.env.DB_HOST || 'localhost',
+
+  /*
+  |--------------------------------------------------------------------------
+  | Port
+  |--------------------------------------------------------------------------
+  |
+  | Set the port of your respective database, which by default is set to 5432.
+  |
+  */
+  port: process.env.DB_PORT || 5432,
 
   /*
   |--------------------------------------------------------------------------
@@ -53,6 +63,18 @@ module.exports = {
   |
   */
   database: process.env.DB_NAME,
+
+  /*
+  |--------------------------------------------------------------------------
+  | Storage
+  |--------------------------------------------------------------------------
+  |
+  | Defines the location where the sqlite bank will be stored. NOTE: Storage
+  | is used only in a test environment, if you do tests with a database,
+  | decompose this line:
+  |
+  */
+  // storage: '../database/tests.sqlite',
 
   /*
   |--------------------------------------------------------------------------

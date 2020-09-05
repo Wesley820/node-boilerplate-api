@@ -25,4 +25,4 @@ Route.get('/', async (request, response) => {
   return response.json({ greeting: 'Hello boilerplate API' });
 });
 
-export default (app) => app.use('/api', Route);
+export default Route;

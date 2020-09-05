@@ -39,7 +39,7 @@ class App {
   }
 
   routes() {
-    routes(this.app);
+    this.app.use(routes);
   }
 }
 
